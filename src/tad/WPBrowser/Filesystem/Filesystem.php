@@ -5,7 +5,8 @@ namespace tad\WPBrowser\Filesystem;
 
 class Filesystem extends \Symfony\Component\Filesystem\Filesystem
 {
-    public function require_once($file)
+
+    public function requireOnce ($file)
     {
         require_once $file;
     }
