@@ -46,7 +46,7 @@ class Filesystem extends \Symfony\Component\Filesystem\Filesystem {
 		return file_get_contents($file);
 	}
 
-	public function unlinkDir($directory) {
+	public function unlinkDir($dir) {
 		$dirs = array($dir);
 		$files = array();
 		for ($i = 0;; $i++) {
