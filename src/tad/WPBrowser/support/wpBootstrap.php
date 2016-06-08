@@ -1,6 +1,6 @@
 <?php
 $wpLoadPath = $argv[1];
-$actions    = unserialize($argv[2]);
+$actions    = unserialize( $argv[2] );
 
 include $wpLoadPath;
 
@@ -11,16 +11,27 @@ if ( isset( $actions['nonces'] ) ) {
 	$output['nonces'] = [ ];
 	foreach ( $actions['nonces'] as $nonceInput ) {
 		$user   = $nonceInput['user'];
-		$action = $nonce['action'];
+		$action = $nonceInput['action'];
 		if ( empty( $output['nonces'][ $user ] ) ) {
 			$output['nonces'][ $user ] = [ ];
 		}
 		wp_set_current_user( $user );
-		$nonce = wp_create_nonce( $action );
+		$nonce                                = wp_create_nonce( $action );
 		$output['nonces'][ $user ][ $action ] = $nonce;
 	}
 }
 
-$output = serialize( $output );
+// Nonces verification
+if ( isset( $actions['nonces_verification'] ) ) {
+	$nonce       = $actions['nonces_verification'];
+	$user        = $nonce['user'];
+	$action      = $nonce['action'];
+	$nonceString = $nonce['nonce'];
+	wp_set_current_user( $user );
 
-return $output;
+	$verified = wp_verify_nonce( $nonceString, $action );
+	
+	die( (bool)$verified ? true : false );
+}
+
+die( serialize( $output ) );
