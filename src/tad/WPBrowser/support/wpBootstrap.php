@@ -1,37 +1,21 @@
 <?php
-$wpLoadPath = $argv[1];
-$actions    = unserialize( $argv[2] );
+/**
+ * Bootstraps a WordPress installation, logs in the user and creates a nonce for the required action.
+ */
 
-include $wpLoadPath;
+// Include wp-load.php to bootstrap WordPress 
+include $argv[1];
 
-$output = [ ];
+$request = unserialize( $argv[2] );
 
-// Nonces generation
-if ( isset( $actions['nonces'] ) ) {
-	$output['nonces'] = [ ];
-	foreach ( $actions['nonces'] as $nonceInput ) {
-		$user   = $nonceInput['user'];
-		$action = $nonceInput['action'];
-		if ( empty( $output['nonces'][ $user ] ) ) {
-			$output['nonces'][ $user ] = [ ];
-		}
-		wp_set_current_user( $user );
-		$nonce                                = wp_create_nonce( $action );
-		$output['nonces'][ $user ][ $action ] = $nonce;
-	}
-}
+// signon the user; will set the cookies but on next page reload...
+$user = wp_signon( $request['credentials'] );
 
-// Nonces verification
-if ( isset( $actions['nonces_verification'] ) ) {
-	$nonce       = $actions['nonces_verification'];
-	$user        = $nonce['user'];
-	$action      = $nonce['action'];
-	$nonceString = $nonce['nonce'];
-	wp_set_current_user( $user );
+//... so let's set and use the ones we've been passed.
+$_COOKIE = array_merge( $_COOKIE, $request['cookies'] );
 
-	$verified = wp_verify_nonce( $nonceString, $action );
-	
-	die( (bool)$verified ? true : false );
-}
+wp_set_current_user( $user->ID, $user->user_login );
 
-die( serialize( $output ) );
+$nonce = wp_create_nonce( $request['action'] );
+
+die ( $nonce );
