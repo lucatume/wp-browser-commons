@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [1.2.1] - 2016-06-09
+### Changed
+- the `Bootstrapper` nonce generation method to use browser credentials
+
 ## [1.2.0] - 2016-06-08
 ### Added
 - `Bootstrapper`  class to handle bootstrapping a WordPress instance to send it requests
