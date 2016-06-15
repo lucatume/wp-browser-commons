@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [1.2.2] - 2016-06-09
+### Added
+- the `WP` adapter module
+
 ## [1.2.1] - 2016-06-09
 ### Changed
 - the `Bootstrapper` nonce generation method to use browser credentials
