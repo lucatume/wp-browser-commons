@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [1.2.3] - 2016-08-10
+### Added
+- `Filesystem::is_readable` method
+
 ## [1.2.2] - 2016-06-09
 ### Added
 - the `WP` adapter module
@@ -40,8 +44,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit.
 
-[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.2...HEAD
-[1.2.2]: https://github.com/lucatume/wp-browser-commons/compare/1.2.2...1.2.2
+[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.3...HEAD
+[1.2.3]: https://github.com/lucatume/wp-browser-commons/compare/1.2.2...1.2.3
+[1.2.2]: https://github.com/lucatume/wp-browser-commons/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/lucatume/wp-browser-commons/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/lucatume/wp-browser-commons/compare/1.1.3...1.2.0
 [1.1.3]: https://github.com/lucatume/wp-browser-commons/compare/1.1.2...1.1.3
