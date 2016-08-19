@@ -40,4 +40,8 @@ class WP
         return admin_url($path, $scheme);
     }
 
+    public function set_site_transient($transient, $value, $expiration = 0)
+    {
+        return set_site_transient($transient, $value, $expiration = 0);
+    }
 }

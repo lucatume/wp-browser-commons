@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [1.2.4] - 2016-08-19
+### Added
+- `WP::set_site_transient` method
+
 ## [1.2.3] - 2016-08-10
 ### Added
 - `Filesystem::is_readable` method
@@ -44,7 +48,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit.
 
-[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.3...HEAD
+[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.4...HEAD
+[1.2.4]: https://github.com/lucatume/wp-browser-commons/compare/1.2.3...1.2.4
 [1.2.3]: https://github.com/lucatume/wp-browser-commons/compare/1.2.2...1.2.3
 [1.2.2]: https://github.com/lucatume/wp-browser-commons/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/lucatume/wp-browser-commons/compare/1.2.0...1.2.1
