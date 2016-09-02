@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [1.2.5] - 2016-09-02
+### Addded
+- `Executor` class to abstract process handling.
+
 ## [1.2.4] - 2016-08-19
 ### Added
 - `WP::set_site_transient` method
@@ -48,7 +52,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit.
 
-[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.4...HEAD
+[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.5...HEAD
+[1.2.5]: https://github.com/lucatume/wp-browser-commons/compare/1.2.4...1.2.5
 [1.2.4]: https://github.com/lucatume/wp-browser-commons/compare/1.2.3...1.2.4
 [1.2.3]: https://github.com/lucatume/wp-browser-commons/compare/1.2.2...1.2.3
 [1.2.2]: https://github.com/lucatume/wp-browser-commons/compare/1.2.1...1.2.2
