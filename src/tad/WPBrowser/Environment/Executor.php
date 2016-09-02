@@ -11,21 +11,6 @@ namespace tad\WPBrowser\Environment;
  */
 class Executor
 {
-
-    /**
-     * @var string
-     */
-    protected $sectionPrefix;
-
-    /**
-     * Executor constructor.
-     * @param string $sectionPrefix
-     */
-    public function __construct($sectionPrefix = '')
-    {
-        $this->sectionPrefix = $sectionPrefix;
-    }
-
     /**
      * Wraps the `exec` functions with some added debug information.
      *
@@ -39,11 +24,9 @@ class Executor
      */
     public function exec($command, array &$output = null, &$return_var = null)
     {
-        $prefix = empty($this->sectionPrefix) ? '' : '[' . $this->sectionPrefix . '] ';
-
-        codecept_debug($prefix . 'command', $command);
+        ob_start();
         $return = exec($command, $output, $return_var);
-        codecept_debug($prefix . 'output', $output);
+        $output = array_merge(explode("\n", ob_get_clean()));
 
         return $return;
     }
