@@ -3,6 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
+
+## [1.2.6] - 2016-09-05
 ### Added
 - `execAndOutput` method to `Environment\Executor` class
 
@@ -54,7 +56,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit.
 
-[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.5...HEAD
+[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.6...HEAD
+[1.2.6]: https://github.com/lucatume/wp-browser-commons/compare/1.2.5...1.2.6
 [1.2.5]: https://github.com/lucatume/wp-browser-commons/compare/1.2.4...1.2.5
 [1.2.4]: https://github.com/lucatume/wp-browser-commons/compare/1.2.3...1.2.4
 [1.2.3]: https://github.com/lucatume/wp-browser-commons/compare/1.2.2...1.2.3
