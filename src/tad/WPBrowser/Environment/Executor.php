@@ -14,20 +14,39 @@ class Executor
     /**
      * Wraps the `exec` functions with some added debug information.
      *
+     * Differently from PHP defaults `exec` function this method will return
+     * the command exit status and not the last line of output.
+     *
      * @see exec()
      *
      * @param string $command
      * @param array $output
-     * @param int $return_var
      *
      * @return int string
      */
-    public function exec($command, array &$output = null, &$return_var = null)
+    public function exec($command, array &$output = null)
+    {
+        list($output, $return_var) = $this->realExec($command);
+
+        return $return_var;
+    }
+
+    public function execAndOutput($command, &$return_var)
+    {
+        list($output, $return_var) = $this->realExec($command);
+
+        return $output;
+    }
+
+    /**
+     * @param $command
+     * @return array
+     */
+    protected function realExec($command)
     {
         ob_start();
-        $return = exec($command, $output, $return_var);
+        exec($command, $output, $return_var);
         $output = array_merge(explode("\n", ob_get_clean()));
-
-        return $return;
+        return array($output, $return_var);
     }
 }
