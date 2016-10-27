@@ -44,4 +44,9 @@ class WP
     {
         return set_site_transient($transient, $value, $expiration = 0);
     }
+
+    public function switch_theme($stylesheet)
+    {
+        return switch_theme($stylesheet);
+    }
 }
