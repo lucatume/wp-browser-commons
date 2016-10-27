@@ -60,7 +60,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit.
 
-[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.6...HEAD
+[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.7...HEAD
+[1.2.7]: https://github.com/lucatume/wp-browser-commons/compare/1.2.6...1.2.7
 [1.2.6]: https://github.com/lucatume/wp-browser-commons/compare/1.2.5...1.2.6
 [1.2.5]: https://github.com/lucatume/wp-browser-commons/compare/1.2.4...1.2.5
 [1.2.4]: https://github.com/lucatume/wp-browser-commons/compare/1.2.3...1.2.4
