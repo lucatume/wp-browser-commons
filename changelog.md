@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [1.2.7] - 2016-10-27
+### Added
+- `WP::switch_theme` method
+
 ## [1.2.6] - 2016-09-05
 ### Added
 - `execAndOutput` method to `Environment\Executor` class
