@@ -59,4 +59,9 @@ class WP
     {
         return do_action($tag, $value);
     }
+
+    public function WP_CONTENT_DIR()
+    {
+        return defined('WP_CONTENT_DIR') ? WP_CONTENT_DIR : '';
+    }
 }

@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - `WP::do_action` method
 - `WP::apply_filters` method
+- `WP::WP_CONTENT_DIR` method
 
 ## [1.2.8] - 2016-10-31
 ### Added
