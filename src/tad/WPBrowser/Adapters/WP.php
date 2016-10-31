@@ -49,4 +49,14 @@ class WP
     {
         return switch_theme($stylesheet);
     }
+
+    public function do_action($tag, $arg = '')
+    {
+        return do_action($tag, $arg);
+    }
+
+    public function apply_filters($tag, $value)
+    {
+        return do_action($tag, $value);
+    }
 }
