@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [1.2.8.2] - 2017-01-25
+### Fixed
+- execution and output in `Executor:realExec()` method
+
 ## [1.2.8.1] - 2016-10-31
 ### Added
 - `WP::do_action` method
