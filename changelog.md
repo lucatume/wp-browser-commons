@@ -74,7 +74,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit.
 
-[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.8.1...HEAD
+[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.8.2...HEAD
+[1.2.8.2]: https://github.com/lucatume/wp-browser-commons/compare/1.2.8.1...1.2.8.2
 [1.2.8.1]: https://github.com/lucatume/wp-browser-commons/compare/1.2.8...1.2.8.1
 [1.2.8]: https://github.com/lucatume/wp-browser-commons/compare/1.2.7...1.2.8
 [1.2.7]: https://github.com/lucatume/wp-browser-commons/compare/1.2.6...1.2.7
