@@ -44,9 +44,9 @@ class Executor
      */
     protected function realExec($command)
     {
-        ob_start();
-        exec($command, $output, $return_var);
-        $output = array_merge(explode("\n", ob_get_clean()));
-        return array($output, $return_var);
+	    exec($command, $output, $return_var);
+	    codecept_debug($output);
+
+	    return array($output, $return_var);
     }
 }
