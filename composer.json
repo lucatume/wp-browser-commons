@@ -2,7 +2,7 @@
   "name": "lucatume/wp-browser-commons",
   "description": "Common libraries of the WP-Browser package.",
   "type": "library",
-  "license": "GPL v2.0",
+  "license": "GPL-2.0",
   "authors": [
     {
       "name": "Luca Tumedei",
