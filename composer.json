@@ -19,7 +19,7 @@
     "php": ">=5.4.0",
     "bacon/bacon-string-utils": "~1.0",
     "codeception/codeception": "~2.1",
-    "symfony/filesystem": "^2.7",
+    "symfony/filesystem": "^3.0",
     "mikemclin/laravel-wp-password": "~2.0.0",
     "xamin/handlebars.php": "~0.10",
     "dg/mysql-dump": "^1.3"
