@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [1.2.9] - 2018-08-14
+### Modified
+- updated the `symfony/filesystem` dependency to `^3.0` (thanks @42antoine)
+
 ## [1.2.8.2] - 2017-01-25
 ### Fixed
 - execution and output in `Executor:realExec()` method
@@ -74,7 +78,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial commit.
 
-[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.8.2...HEAD
+[unreleased]: https://github.com/lucatume/wp-browser-commons/compare/1.2.9...HEAD
+[1.2.9]: https://github.com/lucatume/wp-browser-commons/compare/1.2.8.2...1.2.9
 [1.2.8.2]: https://github.com/lucatume/wp-browser-commons/compare/1.2.8.1...1.2.8.2
 [1.2.8.1]: https://github.com/lucatume/wp-browser-commons/compare/1.2.8...1.2.8.1
 [1.2.8]: https://github.com/lucatume/wp-browser-commons/compare/1.2.7...1.2.8
