@@ -2,6 +2,9 @@
 
 namespace tad\WPBrowser\Environment;
 
+use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\Process;
+
 /**
  * Class Executor
  *
@@ -44,9 +47,15 @@ class Executor
      */
     protected function realExec($command)
     {
-	    exec($command, $output, $return_var);
-	    codecept_debug($output);
+	    $process = new Process( $command );
+	    $process->run();
 
-	    return array($output, $return_var);
+	    if ( ! $process->isSuccessful() ) {
+		    throw new ProcessFailedException( $process );
+	    }
+
+	    codecept_debug( $process->getOutput() );
+
+	    return array( $process->getOutput(), $process->getStatus() );
     }
 }
