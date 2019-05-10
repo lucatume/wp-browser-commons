@@ -2,6 +2,7 @@
   "name": "lucatume/wp-browser-commons",
   "description": "Common libraries of the WP-Browser package.",
   "type": "library",
+  "abandoned": "lucatume/wp-browser",
   "license": "GPL-2.0",
   "authors": [
     {
